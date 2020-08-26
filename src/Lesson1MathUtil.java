@@ -96,7 +96,7 @@ public class Lesson1MathUtil {
     public static boolean isEven(int a) {
         // TODO tagasta true, kui a on paaris arv
         // tagasta false kui a on paaritu arv
-        if (a % 2 == 2) {
+        if (a % 2 == 0) {
             return true;
         } else {
             return false;
