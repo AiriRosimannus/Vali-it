@@ -7,8 +7,8 @@ public class Lesson2 {
         // exercise1();
         // exercise2(4);
         // exercise3(2, 5);
-        fib(5);
-        exercise5();
+       // fib(5);
+       // exercise5();
     }
 
     public static void exercise1() {
@@ -88,7 +88,7 @@ public class Lesson2 {
             return fib(n - 1) + fib(n - 2);
         }
 
-        System.out.println(fib(n));
+        // System.out.println(fib(n));
     }
 
 
