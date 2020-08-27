@@ -1,9 +1,10 @@
 import java.util.Arrays;
 
+
 public class Lesson3 {
 
     public static void main(String[] args) {
-
+        alg(7);
         System.out.println(alg(7));
 
         int a = 5;
@@ -20,14 +21,15 @@ public class Lesson3 {
         int temp;
         System.out.println(Arrays.toString(sort(d)));
 
-        alg(7);
+        String s = "Test";
+        System.out.println(reverseString(s));
 
-        String s = "Tere" ;
-        System.out.println();
+        int e = 17;
+        System.out.println(isPrime(e));
 
     }
 
-    private static int alg(int i) {
+    public static int alg(int i) {
         // todo kui i on paaris arv tagasta i /2
         // kui i on paaritu tagasta i*3+1
 
@@ -93,18 +95,27 @@ public class Lesson3 {
         // Näiteks:
         // a = "Test";
         // return tseT";
-        String result="";
-        for(int i=string.length()-1; i>=0; i--) {
-            result = result + string.charAt(i);
+        char[] in = a.toCharArray();
+        int begin = 0;
+        int end = in.length - 1;
+        char temp;
+        while (end > begin) {
+            temp = in[begin];
+            in[begin] = in[end];
+            in[end] = temp;
+            end--;
+            begin++;
         }
-        System.out.println(result);
-
-        return "";
+        return new String(in);
     }
 
     public static boolean isPrime(int x) {
         // TODO tagasta kas sisestatud arv on primaar arv (jagub ainult 1 ja iseendaga)
-        //     return false;
+        for (int i = 2; i < x; i++) {
+            if (x % i == 0 && i != x) {
+                return false;
+            }
+        }
+        return true;
     }
-
 }

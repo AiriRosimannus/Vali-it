@@ -1,14 +1,24 @@
 import java.math.BigDecimal;
 import java.util.Scanner;
 
+
 public class Lesson2 {
 
     public static void main(String[] args) {
         // exercise1();
         // exercise2(4);
         // exercise3(2, 5);
-       // fib(5);
-       // exercise5();
+        //fibonacci(n);
+
+       /* Scanner scanner = new Scanner(System.in);
+        System.out.println("Sisesta fibonacci jada n element:");
+
+        int n = scanner.nextInt();
+        System.out.println(fibonacci(n)); */
+
+        exercise5(5);
+        System.out.println(exercise5(i));
+
     }
 
     public static void exercise1() {
@@ -71,30 +81,40 @@ public class Lesson2 {
     }
 
 
-    public static int fib(int n) {
+    public static int fibonacci(int n) {
         // TODO
         // Fibonacci jada on fib(n) = fib(n-1) + fib(n-2);
         // 0, 1, 1, 2, 3, 5, 8, 13, 21
         // Tagasta fibonacci jada n element
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Sisesta fibonacci jada n element:");
-
-        n = scanner.nextInt();
 
         {
-            if (n <= 1)
+            if (n <= 2) {
                 return n;
+            } else {
+                return (fibonacci(n - 1) + fibonacci(n - 2));
+            }
 
-            return fib(n - 1) + fib(n - 2);
         }
 
-        // System.out.println(fib(n));
     }
 
 
-    public static void exercise5() {
+    public static void exercise5(int i) {
         // https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=36
+        int k = 0;
+
+
+        while (i != 1) {
+
+            i = Lesson3.alg(i);
+
+            k =  + 1;
+        }
+
+
+        return;
     }
+
 
     public static void exercise6() {
         /*
